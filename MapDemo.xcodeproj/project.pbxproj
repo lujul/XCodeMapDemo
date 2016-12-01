@@ -12,6 +12,8 @@
 		F8250D7B1DF0607C0005EBFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8250D791DF0607C0005EBFA /* Main.storyboard */; };
 		F8250D7D1DF0607C0005EBFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8250D7C1DF0607C0005EBFA /* Assets.xcassets */; };
 		F8250D801DF0607C0005EBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8250D7E1DF0607C0005EBFA /* LaunchScreen.storyboard */; };
+		F8250D891DF060BB0005EBFA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8250D881DF060BB0005EBFA /* MapKit.framework */; };
+		F8250D8B1DF064CF0005EBFA /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8250D8A1DF064CF0005EBFA /* Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F8250D7C1DF0607C0005EBFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8250D7F1DF0607C0005EBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8250D811DF0607C0005EBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8250D881DF060BB0005EBFA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F8250D8A1DF064CF0005EBFA /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8250D891DF060BB0005EBFA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				F8250D741DF0607C0005EBFA /* MapDemo */,
 				F8250D731DF0607C0005EBFA /* Products */,
+				F8250D871DF060BB0005EBFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +66,17 @@
 				F8250D7C1DF0607C0005EBFA /* Assets.xcassets */,
 				F8250D7E1DF0607C0005EBFA /* LaunchScreen.storyboard */,
 				F8250D811DF0607C0005EBFA /* Info.plist */,
+				F8250D8A1DF064CF0005EBFA /* Annotation.swift */,
 			);
 			path = MapDemo;
+			sourceTree = "<group>";
+		};
+		F8250D871DF060BB0005EBFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8250D881DF060BB0005EBFA /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +113,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = SA73FE547W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8250D781DF0607C0005EBFA /* ViewController.swift in Sources */,
+				F8250D8B1DF064CF0005EBFA /* Annotation.swift in Sources */,
 				F8250D761DF0607C0005EBFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +284,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SA73FE547W;
 				INFOPLIST_FILE = MapDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbritto.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SA73FE547W;
 				INFOPLIST_FILE = MapDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mbritto.MapDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
